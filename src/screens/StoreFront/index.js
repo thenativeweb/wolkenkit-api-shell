@@ -1,7 +1,6 @@
 import injectSheet from 'react-jss';
 import React from 'react';
-import Wolkenkit from 'thenativeweb-ux/dist/components/Brand/Product/logos/Wolkenkit';
-import { Brand, Link, View } from 'thenativeweb-ux';
+import { Brand, Link, Product, View } from 'thenativeweb-ux';
 
 const styles = theme => ({
   '@keyframes AnimateLogo': {
@@ -37,10 +36,7 @@ const styles = theme => ({
     'animation-name': 'AnimateTypo',
     'animation-duration': '2500ms',
     'animation-timing-function': 'cubic-bezier(0.390, 0.575, 0.565, 1.000)',
-    'will-change': 'transform',
-    '& div > div:first-child': {
-      display: 'none'
-    }
+    'will-change': 'transform'
   },
   MadeBy: {
     'animation-name': 'AnimateMadeBy',
@@ -56,10 +52,10 @@ const styles = theme => ({
 const StoreFront = ({ classes }) => (
   <View className={ classes.StoreFront } orientation='vertical' alignItems='center' justifyContent='center'>
     <View orientation='vertical' alignItems='center' justifyContent='center'>
-      <div className={ classes.Logo }><Wolkenkit size='l' isAnimated={ true } /></div>
+      <div className={ classes.Logo }><Product name='wolkenkit' size='xl' isAnimated={ true } type='logo-only' /></div>
       <div className={ classes.Typo }>
         <Link href='http://www.wolkenkit.io' isExternal={ true }>
-          <Brand.Product name='wolkenkit' size='l' />
+          <Product name='wolkenkit' size='xl' isAnimated={ true } type='typo-only' />
         </Link>
       </div>
 

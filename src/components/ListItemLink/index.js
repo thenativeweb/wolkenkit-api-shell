@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import injectSheet from 'react-jss';
-import Label from '../Label';
 import ListItem from '../ListItem';
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Icon, Link } from 'thenativeweb-ux';
+import { Icon, Link, Text } from 'thenativeweb-ux';
 
 const styles = theme => ({
   ListItemLink: {
@@ -13,17 +12,18 @@ const styles = theme => ({
       display: 'flex',
       'align-items': 'center',
       'text-decoration': 'none',
-      padding: [ theme.grid.stepSize, theme.grid.stepSize * 2 ],
+      padding: [ theme.grid.stepSize * 0.5, theme.grid.stepSize * 2 ],
       'font-size': theme.font.size.medium,
-      color: theme.color.brand.dark,
-      transition: 'background-color 100ms',
-      'will-change': 'background-color'
+      color: theme.color.brand.dark
     }
   },
 
   IsActive: {
     '& $Link': {
       color: theme.color.brand.highlight
+    },
+    '& $IconRight': {
+      fill: theme.color.brand.highlight
     }
   },
 
@@ -55,7 +55,7 @@ const ListItemLink = ({ classes, className, icon, isActive, label, href }) => {
       <Link className={ classes.Link } href={ href }>
         { icon ? <Icon className={ classes.IconLeft } name={ icon } size='s' /> : null }
 
-        <Label className={ classes.Label }>{ label }</Label>
+        <Text className={ classes.Label }>{ label }</Text>
 
         <Icon className={ classes.IconRight } name='chevron' size='s' />
       </Link>

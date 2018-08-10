@@ -8,7 +8,7 @@ const styles = theme => ({
     'line-height': '30px',
     overflow: 'hidden',
     'border-right': `1px solid ${theme.color.brand.lightGrey}`,
-    'min-width': 200
+    'min-width': 250
   },
 
   Header: {

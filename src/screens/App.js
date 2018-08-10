@@ -1,7 +1,7 @@
 import Information from './Information';
 import React from 'react';
 import StoreFront from './StoreFront';
-import { Application, Brand, Link, Sidebar, ThemeProvider } from 'thenativeweb-ux';
+import { Application, Brand, Link, Product, Sidebar, ThemeProvider } from 'thenativeweb-ux';
 import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 
 const navigate = ({ history, to }) => {
@@ -22,7 +22,7 @@ const App = () => (
           path='*'
           render={ ({ match, history }) => (
             <Sidebar>
-              <Sidebar.Brand><Link href='/#/'><Brand.Product name='API shell' /></Link></Sidebar.Brand>
+              <Sidebar.Brand><Link href='/#/'><Product name='API shell' /></Link></Sidebar.Brand>
               <Sidebar.Item
                 iconName='info-new'
                 isActive={ match.url.startsWith('/info') }
