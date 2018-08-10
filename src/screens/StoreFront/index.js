@@ -20,7 +20,7 @@ const styles = theme => ({
     '100%': { transform: 'translateZ(0px)', opacity: 1 }
   },
   StoreFront: {
-    background: theme.color.brand.dark,
+    background: theme.color.brand.darkGrey,
     perspective: '1000px'
   },
   Logo: {
