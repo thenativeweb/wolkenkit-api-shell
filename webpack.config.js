@@ -11,12 +11,6 @@ const rootDirectory = env === 'production' ? path.join(__dirname, 'dist') : path
 const configuration = {
   mode: env,
   entry: path.join(rootDirectory, 'index'),
-  resolve: {
-    alias: {
-      react: 'preact-compat',
-      'react-dom': 'preact-compat'
-    }
-  },
   output: {
     path: path.join(__dirname, 'build')
   },

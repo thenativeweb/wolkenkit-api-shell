@@ -10,8 +10,8 @@ const styles = theme => ({
 
 const Configuration = ({ classes }) => (
   <div id='screen-information-configuration' className={ classes.Configuration }>
-    <Headline>Configuration</Headline>
-    <Text>
+    <Headline id='screen-information-configuration-headline'>Configuration</Headline>
+    <Text id='screen-information-configuration-text' breakLines={ true }>
       The configuration of this application
       is available at <Link href={ `/v1/configuration.json` }>/v1/configuration.json</Link>.
     </Text>

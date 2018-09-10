@@ -30,11 +30,11 @@ suite('App', function () {
       visible: true
     });
 
-    const screenTitle = await page.$eval('#screen-information-configuration > div:first-child', el => el.innerText);
+    const screenTitle = await page.$eval('#screen-information-configuration-headline', el => el.innerText);
 
     assert.that(screenTitle.trim()).is.equalTo('Configuration');
 
-    const screenText = await page.$eval('#screen-information-configuration > div:nth-child(2)', el => el.innerText);
+    const screenText = await page.$eval('#screen-information-configuration-text', el => el.innerText);
 
     assert.that(screenText.trim()).is.equalTo('The configuration of this application is available at /v1/configuration.json.');
   });
