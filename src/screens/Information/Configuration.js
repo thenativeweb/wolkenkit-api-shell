@@ -9,7 +9,7 @@ const styles = theme => ({
 });
 
 const Configuration = ({ classes }) => (
-  <div className={ classes.Configuration }>
+  <div id='screen-information-configuration' className={ classes.Configuration }>
     <Headline>Configuration</Headline>
     <Text>
       The configuration of this application

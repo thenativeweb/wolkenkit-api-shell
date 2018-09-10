@@ -2,8 +2,10 @@
 node_modules/
 
 # Build artefacts
-build/
 dist/
+
+# Source files
+src/
 
 # OS generated files and folders
 .DS_Store

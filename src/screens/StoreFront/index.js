@@ -52,8 +52,8 @@ const styles = theme => ({
 const StoreFront = ({ classes }) => (
   <View className={ classes.StoreFront } orientation='vertical' alignItems='center' justifyContent='center'>
     <View orientation='vertical' alignItems='center' justifyContent='center'>
-      <div className={ classes.Logo }><Product name='wolkenkit' size='xl' isAnimated={ true } type='logo-only' /></div>
-      <div className={ classes.Typo }>
+      <div id='wolkenkit-brand-logo' className={ classes.Logo }><Product name='wolkenkit' size='xl' isAnimated={ true } type='logo-only' /></div>
+      <div id='wolkenkit-brand-typo' className={ classes.Typo }>
         <Link href='http://www.wolkenkit.io' isExternal={ true }>
           <Product name='wolkenkit' size='xl' isAnimated={ true } type='typo-only' />
         </Link>
