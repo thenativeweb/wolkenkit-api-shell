@@ -40,5 +40,5 @@
     "type": "git",
     "url": "git://github.com/thenativeweb/wolkenkit-api-shell.git"
   },
-  "license": "AGPL-3.0"
+  "license": "MIT"
 }
