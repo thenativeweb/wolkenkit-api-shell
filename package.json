@@ -1,6 +1,6 @@
 {
   "name": "wolkenkit-api-shell",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "wolkenkit-api-shell provides a human face to the API of a wolkenkit application.",
   "contributors": [
     {
