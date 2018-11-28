@@ -1,24 +1,31 @@
 /* eslint-disable strict */
-
 'use strict';
-
 /* eslint-enable strict */
 
-const assert = require('assertthat');
+const assert = require('assertthat'),
+      puppeteer = require('puppeteer');
 
-const browser = require('../../shared/browser');
+const env = require('../../shared/env');
 
 suite('App', function () {
   this.timeout(5 * 1000);
 
-  let page;
+  let browser,
+      page;
+
+  suiteSetup(async () => {
+    browser = await puppeteer.launch({ headless: env.HEADLESS });
+  });
 
   setup(async () => {
-    page = await browser.setupPage();
+    page = await browser.newPage();
+
+    await page.setViewport(env.VIEWPORT);
+    await page.goto(env.APP_URL);
   });
 
   teardown(async () => {
-    await browser.teardownPage(page);
+    await page.close();
   });
 
   test('displays an animation on startup.', async () => {

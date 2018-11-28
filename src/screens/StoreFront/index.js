@@ -4,25 +4,26 @@ import { Brand, Link, Product, View } from 'thenativeweb-ux';
 
 const styles = theme => ({
   '@keyframes AnimateLogo': {
-    '0%': { transform: 'translateZ(-400px)', opacity: 0 },
+    '0%': { transform: 'scale(0.6)', opacity: 0 },
     '10%': { opacity: 0 },
-    '100%': { transform: 'translateZ(0px)', opacity: 1 }
+    '100%': { transform: 'scale(1)', opacity: 1 }
   },
   '@keyframes AnimateTypo': {
-    '0%': { transform: 'translateZ(-300px)', opacity: 0 },
+    '0%': { transform: 'scale(0.7)', opacity: 0 },
     '40%': { opacity: 0 },
-    '100%': { transform: 'translateZ(0px)', opacity: 1 }
+    '100%': { transform: 'translate3d(0, 0, 0px)', opacity: 1 }
   },
   '@keyframes AnimateMadeBy': {
-    '0%': { transform: 'translateZ(-250px)', opacity: 0 },
+    '0%': { transform: 'scale(0.8)', opacity: 0 },
     '50%': { opacity: 0 },
-    '100%': { transform: 'translateZ(0px)', opacity: 1 }
+    '100%': { transform: 'translate3d(0, 0, 0px)', opacity: 1 }
   },
   StoreFront: {
     background: theme.color.brand.darkGrey,
     perspective: '1000px'
   },
   Logo: {
+    'transform-style': 'preserve-3d',
     'animation-name': 'AnimateLogo',
     'animation-duration': '4500ms',
     'animation-timing-function': 'cubic-bezier(0.190, 0.965, 0.165, 1)',
@@ -33,15 +34,18 @@ const styles = theme => ({
     }
   },
   Typo: {
+    'transform-origin': '50% -200%',
+    'transform-style': 'preserve-3d',
     'animation-name': 'AnimateTypo',
     'animation-duration': '2500ms',
     'animation-timing-function': 'cubic-bezier(0.390, 0.575, 0.565, 1.000)',
     'will-change': 'transform'
   },
   MadeBy: {
+    'transform-origin': '50% -400%',
     'animation-name': 'AnimateMadeBy',
     'animation-delay': '500ms',
-    'animation-duration': '2000ms',
+    'animation-duration': '1900ms',
     'animation-timing-function': 'cubic-bezier(0.390, 0.575, 0.565, 1.000)',
     'animation-fill-mode': 'both',
     'will-change': 'transform',

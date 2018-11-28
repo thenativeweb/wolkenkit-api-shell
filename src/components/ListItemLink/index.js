@@ -14,7 +14,21 @@ const styles = theme => ({
       'text-decoration': 'none',
       padding: [ theme.grid.stepSize * 0.5, theme.grid.stepSize * 2 ],
       'font-size': theme.font.size.medium,
-      color: theme.color.brand.dark
+      color: theme.color.brand.dark,
+      position: 'relative',
+
+      '&:focus': {
+        outline: `0`
+      },
+      '&:focus::before': {
+        content: '""',
+        position: 'absolute',
+        right: 0,
+        left: 0,
+        top: -1,
+        bottom: -1,
+        'border-left': `${theme.color.brand.highlight} 2px solid`
+      }
     }
   },
 

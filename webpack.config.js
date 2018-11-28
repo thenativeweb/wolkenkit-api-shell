@@ -1,3 +1,7 @@
+/* eslint-disable strict */
+'use strict';
+/* eslint-enable strict */
+
 const path = require('path');
 
 const CompressionPlugin = require('compression-webpack-plugin'),
