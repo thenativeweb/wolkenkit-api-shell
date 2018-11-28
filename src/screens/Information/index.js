@@ -29,9 +29,9 @@ const Information = ({ classes, match }) => (
         />
 
         <ListItemLink
-          label='Test & Debug'
-          href={ `/#/info/test-debug` }
-          isActive={ match.params.view === 'test-debug' }
+          label='Test and Debug'
+          href={ `/#/info/test-and-debug` }
+          isActive={ match.params.view === 'test-and-debug' }
         />
       </List>
     }
@@ -42,7 +42,7 @@ const Information = ({ classes, match }) => (
           component={ Configuration }
         />
         <Route
-          path={ `/info/test-debug` }
+          path={ `/info/test-and-debug` }
           component={ TestAndDebug }
         />
       </Switch>

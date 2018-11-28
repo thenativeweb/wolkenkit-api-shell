@@ -5,7 +5,7 @@
 /* eslint-enable strict */
 
 const env = {
-  HEADLESS: true,
+  HEADLESS: false,
   APP_URL: 'http://localhost:8080/',
   VIEWPORT: { width: 1280, height: 800 }
 };

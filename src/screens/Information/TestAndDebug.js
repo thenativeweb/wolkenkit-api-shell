@@ -27,19 +27,23 @@ const getConsoleParameters = function () {
 };
 
 const getConsoleUrl = function () {
-  const url = `http://localhost:4000/${getConsoleParameters()}`;
+  const url = `https://console.wolkenkit.io/${getConsoleParameters()}`;
 
   return url;
 };
 
 const TestAndDebug = React.memo(({ classes }) => (
   <div id='screen-information-test-debug' className={ classes.TestAndDebug }>
-    <Headline id='screen-information-test-debug-headline'>Test & Debug</Headline>
+    <Headline id='screen-information-test-debug-headline'>Test and Debug</Headline>
     <Text id='screen-information-test-debug-text' breakLines={ true }>
-      Connect to and play with this API. Send commands, observe events and read models.
+      Connect to and play with this API. Send commands, observe events and read models,
       using <Link href={ getConsoleUrl() }>console.wolkenkit.io</Link>.
     </Text>
-    <Link href={ getConsoleUrl() } isExternal={ true }><Button>Connect to this API</Button></Link>
+    <Link
+      href={ getConsoleUrl() } isExternal={ true }
+    >
+      <Button id='screen-information-test-debug-button'>Connect to this API</Button>
+    </Link>
   </div>
 ));
 
