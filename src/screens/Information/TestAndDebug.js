@@ -5,6 +5,9 @@ import { Button, Headline, Link, Text } from 'thenativeweb-ux';
 const styles = theme => ({
   TestAndDebug: {
     padding: theme.grid.stepSize * 2
+  },
+  ActionButton: {
+    display: 'inline-flex'
   }
 });
 
@@ -42,7 +45,12 @@ const TestAndDebug = React.memo(({ classes }) => (
     <Link
       href={ getConsoleUrl() } isExternal={ true }
     >
-      <Button id='screen-information-test-debug-button'>Connect to this API</Button>
+      <Button
+        id='screen-information-test-debug-button'
+        className={ classes.ActionButton }
+      >
+        Connect to this API
+      </Button>
     </Link>
   </div>
 ));
